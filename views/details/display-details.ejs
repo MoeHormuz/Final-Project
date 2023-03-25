@@ -1,0 +1,76 @@
+<%- include("../components/head") %>
+
+    <body>
+
+        <%- include("../components/nav") %>
+
+            <!-- Main Content-->
+            <main class="mb-4">
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-md-10 col-lg-8 col-xl-5">
+                            <h1>Display Details</h1>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <table border="2">
+                            <thead>
+                                <tr>
+                                    <th>Student ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                    <th>Class</th>
+                                    <th>Reg Date</th>
+                                    <th>Lesson Name</th>
+                                    <th>Department Name</th>
+                                </tr>
+                            </thead>
+                            <% data.forEach(element=> { %>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <%= element.StudentId %>
+                                        </td>
+                                        <td>
+                                            <%= element.FirstName %>
+                                        </td>
+                                        <td>
+                                            <%= element.LastName %>
+                                        </td>
+                                        <td>
+                                            <%= element.Age %>
+                                        </td>
+                                        <td>
+                                            <%= element.Class %>
+                                        </td>
+                                        <td>
+                                            <%= element.RegDate %>
+                                        </td>
+                                        <td>
+                                            <%= element.LessonName %>
+                                        </td>
+                                        <td>
+                                            <%= element.DepartmentName %>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <% }) %>
+                        </table>
+                        <div class="col-md-10 col-lg-8 col-xl-5">
+                            <div class="my-5">
+                                <button><a href="/">HOME</a></button>
+                                <button><a href="/display">Display Another Student</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <br>
+            <%- include("../components/footer") %>
+
+    </body>
+
+    </html>

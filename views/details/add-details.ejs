@@ -1,0 +1,28 @@
+<%- include("../components/head") %>
+
+    <body>
+
+        <%- include("../components/nav") %>
+
+            <!-- Main Content-->
+            <main class="mb-4">
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-md-10 col-lg-8 col-xl-7">
+                            <h1>Addition Details</h1>
+                            <h4>Student <span style="color: #0085A1;"><%= firstName %> <%= lastName %></span> has been <span style="color: green;">added</span> successfully</h4>
+                            <div class="my-5">
+                                <button><a href="/">HOME</a></button>
+                                <button><a href="/add">Add Another Student</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <br>
+            <%- include("../components/footer") %>
+
+    </body>
+
+    </html>

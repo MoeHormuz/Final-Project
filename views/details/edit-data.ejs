@@ -1,0 +1,97 @@
+<%- include("../components/head") %>
+
+    <body>
+
+        <%- include("../components/nav") %>
+
+            <!-- Main Content-->
+            <main class="mb-4">
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-md-10 col-lg-8 col-xl-7">
+                            <h1>Edit Information</h1>
+
+                            <div class="my-5">
+
+                                <form action="/edit-data" method="post">
+                                    <!--FIRST NAME-->
+                                    <div>
+                                        <label for="firstName">First Name</label>
+                                        <input class="form-control" id="firstName" name="firstName" type="text"
+                                            value="<%= obj.firstName %>" required />
+                                    </div>
+
+                                    <br>
+
+                                    <!--LAST NAME-->
+                                    <div>
+                                        <label for="lastName">Last Name</label>
+                                        <input class="form-control" id="lastName" name="lastName" type="text"
+                                            value="<%= obj.lastName %>" required />
+                                    </div>
+
+                                    <br>
+
+                                    <!--AGE-->
+                                    <div>
+                                        <label for="age">Age</label>
+                                        <input class="form-control" id="age" name="age" type="number"
+                                            value="<%= obj.age %>" required />
+                                    </div>
+
+                                    <br>
+
+                                    <!--CLASS-->
+                                    <div>
+                                        <label for="class">Class</label>
+                                        <select class="form-control" id="class" name="class">
+                                            <optgroup label="Class">
+                                                <% let options=["One", "Two" , "Three" , "Four" , "Five"]; %>
+                                                <% options.forEach(option => { %>
+                                                    <option value="<%= option %>" <%= obj.Class == option ? 'selected' : '' %>><%= option %></option>
+                                                <% }) %>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+
+                                    <br>
+
+                                    <!--LESSON-->
+                                    <div>
+                                        <label for="lesson">Lesson</label>
+                                        <select class="form-control" id="lesson" name="lessons">
+                                            <% DD.forEach(lesson => { %>
+                                                <optgroup label="<%= lesson.label %>">
+                                                        <option value="<%= lesson.value1 %>" <%= obj.lessons == lesson.value1 ? 'selected' : '' %>><%= lesson.text1 %></option>
+                                                        <option value="<%= lesson.value2 %>" <%= obj.lessons == lesson.value2 ? 'selected' : '' %>><%= lesson.text2 %></option>
+                                                </optgroup>
+                                            <% }) %>
+                                            <% P.forEach(lesson => { %>
+                                                <optgroup label="<%= lesson.label %>">
+                                                        <option value="<%= lesson.value1 %>" <%= obj.lessons == lesson.value1 ? 'selected' : '' %>><%= lesson.text1 %></option>
+                                                        <option value="<%= lesson.value2 %>" <%= obj.lessons == lesson.value2 ? 'selected' : '' %>><%= lesson.text2 %></option>
+                                                        <option value="<%= lesson.value3 %>" <%= obj.lessons == lesson.value3 ? 'selected' : '' %>><%= lesson.text3 %></option>
+                                                        <option value="<%= lesson.value4 %>" <%= obj.lessons == lesson.value4 ? 'selected' : '' %>><%= lesson.text4 %></option>
+                                                </optgroup>
+                                            <% }) %>
+                                        </select>
+                                    </div>
+
+                                    <br />
+
+                                    <!-- Submit Button-->
+                                    <button class="btn btn-primary text-uppercase" id="submitButton"
+                                        type="submit">SAVE</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <%- include("../components/footer") %>
+
+    </body>
+
+    </html>

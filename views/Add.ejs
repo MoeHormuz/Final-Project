@@ -1,0 +1,93 @@
+<%- include("./components/head") %>
+
+    <body>
+
+        <%- include("./components/nav") %>
+
+            <!-- Main Content-->
+            <main class="mb-4">
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-md-10 col-lg-8 col-xl-7">
+                            <h1>Addition page</h1>
+                            <h4>Enter the information of the student you want to add:</h4>
+                            <div class="my-5">
+
+                                <form action="/add" method="post">
+                                    <!--FIRST NAME-->
+                                    <div class="form-floating">
+                                        <input class="form-control" id="firstName" name="firstName" type="text"
+                                            placeholder="Enter your first name..." required />
+                                        <label for="firstName">First Name</label>
+                                    </div>
+
+                                    <!--LAST NAME-->
+                                    <div class="form-floating">
+                                        <input class="form-control" id="lastName" name="lastName" type="text"
+                                            placeholder="Enter your last name..." required />
+                                        <label for="lastName">Last Name</label>
+                                    </div>
+
+                                    <!--AGE-->
+                                    <div class="form-floating">
+                                        <input class="form-control" id="age" name="age" type="number"
+                                            placeholder="Enter your age..." required />
+                                        <label for="age">Age</label>
+                                    </div>
+
+                                    <br>
+
+                                    <!--CLASS-->
+                                    <div class="form-floating">
+                                        <select class="form-control" id="class" name="class">
+                                            <optgroup label="Class">
+                                                <option value="One">One</option>
+                                                <option value="Two">Two</option>
+                                                <option value="Three">Three</option>
+                                                <option value="Four">Four</option>
+                                                <option value="Five">Five</option>
+                                            </optgroup>
+                                        </select>
+                                        <label for="class">Class</label>
+                                    </div>
+
+                                    <br>
+
+                                    <!--LESSON-->
+                                    <div class="form-floating">
+                                        <select class="form-control" id="lesson" name="lessons">
+                                            <optgroup label="Design">
+                                                <option value="1111">Adobe</option>
+                                                <option value="2222">Photoshop</option>
+                                            </optgroup>
+                                            <optgroup label="Databases">
+                                                <option value="3333">SQL</option>
+                                                <option value="4444">MongoDB</option>
+                                            </optgroup>
+                                            <optgroup label="Programming">
+                                                <option value="5555">JavaScript</option>
+                                                <option value="6666">Python</option>
+                                                <option value="7777">Ruby</option>
+                                                <option value="8888">PHP</option>
+                                            </optgroup>
+                                        </select>
+                                        <label for="lesson">Lesson</label>
+                                    </div>
+
+                                    <br />
+
+                                    <!-- Submit Button-->
+                                    <button class="btn btn-primary text-uppercase" id="submitButton"
+                                        type="submit">ADD</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <%- include("./components/footer") %>
+
+    </body>
+
+    </html>
