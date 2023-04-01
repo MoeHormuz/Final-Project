@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 
 // HOME:
 app.get("/home", (req, res) => {
-    res.render("Home", { title: "Student Data Management" })
+    res.render("Home", { title: "Students Data Manager" })
 });
 
 
