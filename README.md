@@ -4,7 +4,7 @@
 This project is a students data management system, through which you can add, delete, edit and display student data.
 ## Tech Stack
 
-**Client:** Bootstrap, Font-Awesome
+**Client:** Bootstrap, Google-Fonts, Font-Awesome
 
 **Server:** Node, Express, SQLite, EJS
 
