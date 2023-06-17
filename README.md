@@ -1,7 +1,17 @@
 
 # Students Data Manager
 
-This project is a students data management system, through which you can add, delete, edit and display student data.
+This project is a student data management system, through which you can display and control student data.
+
+
+## Features
+
+- Display students data
+- Edit student data
+- Add a new student
+- Delete a student
+
+
 ## Tech Stack
 
 **Client:** Bootstrap, Google-Fonts, Font-Awesome
