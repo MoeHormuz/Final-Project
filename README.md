@@ -7,9 +7,9 @@ This project is a student data management system, through which you can display 
 ## Features
 
 - Display students data
-- Edit student data
-- Add a new student
-- Delete a student
+- Edit students data
+- Addition new student
+- Deletion student
 
 
 ## Tech Stack
