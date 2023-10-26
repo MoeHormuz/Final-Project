@@ -44,6 +44,6 @@ Start the server
 ```bash
   npm run start
 ```
-## Note
+## Hint
 
 After running the project, the database will be empty, i.e. it does not contain any student.
